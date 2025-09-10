@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Corporate Application Portal — Mock</title>
+<style>
+  :root{
+    --highlight:#8a6cff; /* matches purple AI logo */
+    --text:#1e2a55;
+    --icon-size:120px;
+  }
+
+  main{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:#fff;
+  }
+
+  .app-card{
+    text-align:center;
+  }
+
+  .gyan-wrap{
+    position:relative;
+    display:inline-block;
+  }
+
+  .gyan {
+    width:var(--icon-size);
+    height:var(--icon-size);
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    box-shadow:0 0 20px rgba(138,108,255,0.5);
+    animation: pulse 2.5s infinite ease-in-out;
+  }
+
+  .gyan img{
+    width:100%;
+    height:100%;
+    border-radius:12px;
+    object-fit:contain;
+  }
+
+  .label{
+    margin-top:12px;
+    font-size:18px;
+    font-weight:600;
+    color:var(--text);
+    letter-spacing:1px;
+  }
+
+  /* floating particles */
+  .particle {
+    position:absolute;
+    width:6px;height:6px;
+    border-radius:50%;
+    background:var(--highlight);
+    opacity:0.6;
+    animation: float 3s linear infinite;
+  }
+  .p1{ top:-10px; left:20%; animation-duration:2.8s; }
+  .p2{ top:40%; left:-15px; animation-duration:3.2s; }
+  .p3{ top:60%; right:-15px; animation-duration:3.5s; }
+  .p4{ bottom:-12px; left:40%; animation-duration:3.8s; }
+  .p5{ top:10%; right:20%; animation-duration:2.9s; }
+
+  @keyframes pulse {
+    0%,100% { transform:scale(1); box-shadow:0 0 20px rgba(138,108,255,0.5); }
+    50% { transform:scale(1.05); box-shadow:0 0 35px rgba(138,108,255,0.7); }
+  }
+
+  @keyframes float {
+    0% { transform:translateY(0); opacity:0.8; }
+    50% { transform:translateY(-8px); opacity:0.4; }
+    100% { transform:translateY(0); opacity:0.8; }
+  }
+</style>
+</head>
+<body>
+  <main>
+    <div class="app-card">
+      <div class="gyan-wrap" title="IFFCO GYAN HUB">
+        <div class="gyan">
+          <img src="AI.png" alt="AI Logo">
+          <span class="particle p1"></span>
+          <span class="particle p2"></span>
+          <span class="particle p3"></span>
+          <span class="particle p4"></span>
+          <span class="particle p5"></span>
+        </div>
+      </div>
+      <div class="label">IFFCO GYAN HUB</div>
+    </div>
+  </main>
+</body>
+</html>
